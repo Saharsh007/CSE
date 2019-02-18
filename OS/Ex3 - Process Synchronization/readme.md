@@ -13,7 +13,7 @@ The POSIX thread libraries are a standards based thread API for C/C++.
 
 ## MUTEX
 sem_t mutex -- definition  
-sem_init(&mutex, 0, 1)   -- initialization  
+sem_init(&mutex, 0, 1) -- initialization  
 
 ## sem_post(&mutex)
 increase the value of mutex ,thats it!
