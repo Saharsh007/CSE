@@ -55,6 +55,7 @@ void *produce(void *number)
 
 		tim = rand()%MAX_SEC;
 		usleep(tim);
+		
 		makeproduct(product);
 
 		sem_post(&mutexx);

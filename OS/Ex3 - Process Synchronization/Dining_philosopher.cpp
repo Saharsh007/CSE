@@ -12,7 +12,7 @@ using namespace std;
 #define N 100
 #define MAX_SEC 1000000 //1 second
 
-sem_t mutexx,spoon[N];
+sem_t mutexx,spoon[N]; // n semaphores for n spoons
 int n;
 
 void *eat(void *number)
@@ -47,7 +47,7 @@ int main()
 {
 	srand(time(0)); // for random values according to current time and random
 
-	pthread_t phil[N];
+	pthread_t phil[N]; // n threads for n philosopher
 	int id[N];
 	f(i,0,N)
 	id[i] = i+1;
