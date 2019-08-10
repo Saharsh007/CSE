@@ -17,7 +17,7 @@ int main(int argc , char *argv[])
 {   
     int opt = TRUE;   
     int master_socket , addrlen , new_socket , client_socket[30] ,  
-          max_clients = 30 , activity, i , valread , sd;   
+          max_clients = 30 , activity, i , valread , sd,tempsocket;   
     // client_socket is the array of file descriptors      
     int max_sd;   
     struct sockaddr_in address;
@@ -214,8 +214,9 @@ int main(int argc , char *argv[])
         for (i = 0; i < max_clients; i++)   
         {   
             // printf("for client %d",i+1);
+
             sd = client_socket[i];   
-                 
+            
             if (FD_ISSET( sd , &readfds))   
             {   
                 //Check if it was for closing , and also read the  
@@ -236,10 +237,20 @@ int main(int argc , char *argv[])
                 //Echo back the message that came in  
                 else 
                 {   
+                    char *buff;
+
+                    read(sd, buff, sizeof(buff)); 
+                    printf("From client: %s\t", buff); 
+                    for(int temp = 0; temp<max_clients; temp++){
+                        tempsocket = client_socket[temp];
+                        if(tempsocket != 0)
+                        write(sd, buff, sizeof(buff)); 
+                    }
                     //set the string terminating NULL byte on the end  
                     //of the data read  
-                    buffer[valread] = '\0';   
-                    send(sd , buffer , strlen(buffer) , 0 );   
+                    // buffer[valread] = '\0';
+                    // send(sd , buffer , strlen(buffer) , 0 );   
+
                 }   
             }   
         }   
