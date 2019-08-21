@@ -62,7 +62,7 @@ This command will install ns-3, NetAnim and PyViz.
 3. Once the installation completes, go to ns-allinone-3.27/ns-3.27 and give the following command:
 
 ```diff
-+ ./test.py -c core**
++ ./test.py -c core
 ```
 
 If it works correctly then you'll see some files
