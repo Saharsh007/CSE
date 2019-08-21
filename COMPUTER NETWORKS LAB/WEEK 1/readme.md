@@ -38,7 +38,8 @@ If you had a tool that allowed you to model your current network, then make chan
 
 > WIRESHARK  - Wireshark is a network packet analyzer. A network packet analyzer will try to capture network packets and tries to display that packet data as detailed as possible.  
 These are other packet analyser    
-TCPDUMP, gnuplot, NetAnim, PyViz  
+TCPDUMP, gnuplot, PyViz.  
+ NetAnim  -  offline animator
 
 ...
 
