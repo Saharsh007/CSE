@@ -51,7 +51,7 @@ Steps to install ns-3.29:
 
 1. Download [ns-allinone-3.29.tar.bz2](https://www.nsnam.org/releases/ns-3-29/) and unzip it.
 
-2. Go to ns-allinone-3.27 folder and give the following command:  
+2. Go to ns-allinone-3.29 folder and give the following command:  
 This command will install ns-3, NetAnim and PyViz.
 
 ```diff
@@ -59,7 +59,7 @@ This command will install ns-3, NetAnim and PyViz.
 ```
 
 
-3. Once the installation completes, go to ns-allinone-3.27/ns-3.27 and give the following command:
+3. Once the installation completes, go to ns-allinone-3.29/ns-3.29 and give the following command:
 
 ```diff
 + ./test.py -c core
