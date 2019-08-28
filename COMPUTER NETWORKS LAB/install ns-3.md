@@ -35,27 +35,27 @@ for ubuntu 18.04 and ns-3 version 3.29
 - For Ubuntu 18.04, python-pygoocanvas is no longer provided. The ns-3.29 release and later upgrades the support to GTK+ version 3, and requires these packages:
 ```
 ```diff
-+ apt-get install gir1.2-goocanvas-2.0 python-gi python-gi-cairo python-pygraphviz python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython ipython3
++sudo apt-get install gir1.2-goocanvas-2.0 python-gi python-gi-cairo python-pygraphviz python3-gi python3-gi-cairo python3-pygraphviz gir1.2-gtk-3.0 ipython ipython3
 ```
 
 rest of them ->
 
 ```diff
-+ sudo apt-get install gcc g++ python python-dev qt4-dev-tools libgtk-3-dev python-pygraphviz wireshark gnuplot openjdk-8-jdk**
++sudo apt-get install gcc g++ python python-dev qt4-dev-tools libgtk-3-dev python-pygraphviz wireshark gnuplot openjdk-8-jdk**
 ```
 
 *Wireshark and Gnuplot will be ready to use after this command! TraceMetrics does not require installation.*
 
 
-Steps to install ns-3:
+Steps to install ns-3.29:
 
-1. Download [ns-allinone-3.27.tar.bz2](https://www.nsnam.org/releases/ns-3-29/) and unzip it.
+1. Download [ns-allinone-3.29.tar.bz2](https://www.nsnam.org/releases/ns-3-29/) and unzip it.
 
 2. Go to ns-allinone-3.27 folder and give the following command:  
 This command will install ns-3, NetAnim and PyViz.
 
 ```diff
-+ ./build.py --enable-examples --enable-tests**
++ ./build.py --enable-examples --enable-tests
 ```
 
 
