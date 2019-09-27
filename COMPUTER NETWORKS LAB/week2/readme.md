@@ -8,7 +8,7 @@
 
 do
 ```diff
-+ ./waf clean
++++ ./waf clean
 
 + ./waf --enable-examples --enable-tests configure
 build 

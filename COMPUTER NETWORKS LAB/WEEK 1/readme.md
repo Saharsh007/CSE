@@ -50,7 +50,7 @@ If you had a tool that allowed you to model your current network, then make chan
 
 
 >WHAT IS WAF  
-A web application firewall (WAF) is a firewall that monitors, filters or blocks data packets as they travel to and from a website or web application. A WAF can be either network-based, host-based or cloud-based and is often deployed through a reverse proxy and placed in front of one or more web sites or applications. 
+A build tool to compile programs.
 
 ...
 

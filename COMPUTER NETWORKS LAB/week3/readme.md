@@ -12,6 +12,21 @@ After removing line 71
 
  ![after](after.png "after")
 
+## Putting breakpoints at 3 places
+
+    Execute command: ./waf shell
+    Execute command: gdb build/scratch/star
+
+Now in the gdb   
+do
+
+    
+    b line_number1/line_name // to set breakpoint
+    b line_number2
+    b line_number3
+    run
+
+
 ## Print the data type of the variables in star.cc using gdb (GNU Debugger)
 
     Copy star.cc from examples/tcp to scratch
@@ -23,16 +38,19 @@ After removing line 71
 put breakpoint before those lines using and run  
 when the program stops then do ptype variable name
     
-    b linenum1
+    b linenum1  
     next //n times untill next variable is reached
     run
-    ptype variable name
+    ptype variable name  
 
+FYI - This works , if it doesn't on yours , you suck at googling :)
 ## Modify first.cc to support IPv6 addressing
 
-The file "first.cc" is modified to support IPv6 , do 
+The file "Ipv6.cc" is modified to support IPv6 , do 
     
     ./waf --run "scratch/first V6"
+
+FYI - change its name to first.cc and put in scratch.
 
 ## Enable support of flow monitor in tcp-bulk-send.cc
 The files tcp-bulk-send.cc is the edited file which is monitered.  
@@ -52,9 +70,29 @@ add these lines to switch to TcpHighSpeed
     CommandLine cmd;
     cmd.AddValue ("transport_prot","Transport protocol to use: TcpHighSpeed, ", transport_prot);
 
+Now look at all the places where some other tcp is being used and change it to TcpHighSpeed.
+
 now follow the link
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[![IMAGE ALT TEXT HERE](before.png)](sample.mp4)
