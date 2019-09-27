@@ -21,7 +21,12 @@ Sample ns2 code. In which there are four different nodes are available and two d
 >WHY NETWORK SIMULATOR?  
 Making changes to your network are expensive. Mistakes can cost you a lot of money to rectify.  
 If you had a tool that allowed you to model your current network, then make changes to it to see what happened.  
- That would be useful wouldnt it? The network simulator would remove some of the uncertainty surrounding the changes you were making. Of course, it wont remove all of the uncertainty, but at least it will remove some of it.
+ That would be useful wouldnt it? The network simulator would remove some of the uncertainty surrounding the changes you were making. Of course, it wont remove all of the uncertainty, but at least it will remove some of it.  
+
+
+ **Emulation** is the process of mimicking the outwardly observable behavior to match an existing target. The internal state of the emulation mechanism does not have to accurately reflect the internal state of the target which it is emulating.  
+
+**Simulation** involves modeling the underlying state of the target. The end result of a good simulation is that the simulation model will emulate the target which it is simulating.
 
 ...
 
@@ -36,11 +41,11 @@ If you had a tool that allowed you to model your current network, then make chan
 
 
 
-> WIRESHARK  - Wireshark is a network packet analyzer. A network packet analyzer will try to capture network packets and tries to display that packet data as detailed as possible.  
-These are other packet analyser    
-TCPDUMP, gnuplot, PyViz.  
- NetAnim  -  offline animator
-
+>* WIRESHARK  - Wireshark is a network packet analyzer. A network packet analyzer will try to capture network packets and tries to display that packet data as detailed as possible.  
+>* TCPDUMP -  is a type of packet analyzer software utility that monitors and logs TCP/IP traffic passing between a network and the computer on which it is executed.
+>* NetAnim  -  offline animator whihc animates the simulation of XML trace file collected during simulation.  
+>* PyViz - another animator  
+>* gnuplot - used in plotting graphs  
 ...
 
 
@@ -54,7 +59,10 @@ Windows Script Host provides an environment in which users can execute scripts i
 
 ...  
 
->helper classes vs containers  
+>helper classes vs containers
+HELPER CLASSES - functions which makes life of a developer easy 
+CONTAINERS -  
+
 
 > CALLBACKS  -  A callback is a function that is to be executed after another function has finished executing.
 

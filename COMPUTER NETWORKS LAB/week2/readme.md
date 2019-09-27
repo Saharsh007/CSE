@@ -1,4 +1,10 @@
-## ● Plot a Line graph for TCP congestion window (cwnd) using gnuplot
+* ##  plot using netanim 
+>create trace xml file with anyone of the programs.
+
+    1.add this header file - #include "ns3/netanim-module.h"
+    2.add this line just before run simulator -  AnimationInterface anim ("animation.xml");
+    3. Launch net anim from its directory and load the xml file and hit start.  
+* ##  Plot a Line graph for TCP congestion window (cwnd) using gnuplot
 
 do
 ```diff
@@ -19,7 +25,7 @@ build
     a new window opens with graph of sin(x)
 
 After doing the above commands we'll find **TcpVariantsComparison-cwnd.data** in the ns3 folder.   
-Create a same file **mygnupolt.plt** in the same directory.  
+Create a  file **mygnupolt.plt** in the same directory.  
 Write this in the file 
 
     set terminal png
@@ -32,4 +38,4 @@ and a file is generated named cwnd.png , which is the required output file.
 
 ## ● Enable support of ASCII traces in first.cc and collect the statistics
 
-[solution here](https://codein.withgoogle.com/archive/2018/organization/5152211763986432/task/5521019934605312])
+[solution here](https://codein.withgoogle.com/archive/2018/organization/5152211763986432/task/5521019934605312)
