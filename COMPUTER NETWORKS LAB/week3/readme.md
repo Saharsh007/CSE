@@ -77,22 +77,3 @@ now follow the link
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[![IMAGE ALT TEXT HERE](before.png)](sample.mp4)
