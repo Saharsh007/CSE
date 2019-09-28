@@ -1,4 +1,4 @@
-## This repo has the codes and programs form NITK B.TECH CSE lab courses 4th sem onwards.
+## This repo has the codes and programs form NITK B.TECH CSE lab courses 4th sem onwards.   
 
 ### OS - Operating System - 4th sem
 - programs simulating functionalities of Operating System
