@@ -1,0 +1,3 @@
+- ##  intro to linux namespaces 
+- https://www.youtube.com/watch?v=_WgUwUf1d34
+- https://www.youtube.com/watch?v=j_UUnlVC2Ss
