@@ -136,8 +136,43 @@ sudo ip netns exec b1 sysctl -w net.ipv4.ip_forward=1
 sudo ip netns exec b2 sysctl -w net.ipv4.ip_forward=1
 
 
-# Try ping now, it works
-sudo ip netns exec l1 ping 10.0.4.1 -c 5
-sudo ip netns exec l1 ping 10.0.5.1 -c 5
-sudo ip netns exec r1 ping 10.0.3.1 -c 5
+# Try ping now,
+sudo ip netns exec l1 ping 10.0.4.1 -c 2
+sudo ip netns exec l1 ping 10.0.5.1 -c 2
+sudo ip netns exec r1 ping 10.0.3.1 -c 2
+
+echo "\n\n                     changing bandwidth and latency\n\n"
+
+echo "intial speed"
+sleep 5s
+
+sudo ip netns exec l1 iperf -c 10.0.4.1
+
+
+
+# changing bandwidth values
+
+sudo ip netns exec l1 tc qdisc add dev l1b1 root tbf rate 100mbit burst 100kbit latency 5ms
+sudo ip netns exec l2 tc qdisc add dev l2b1 root tbf rate 100mbit burst 100kbit latency 5ms
+sudo ip netns exec l3 tc qdisc add dev l3b1 root tbf rate 100mbit burst 100kbit latency 5ms
+
+sudo ip netns exec r1 tc qdisc add dev r1b2 root tbf rate 100mbit burst 100kbit latency 5ms
+sudo ip netns exec r2 tc qdisc add dev r2b2 root tbf rate 100mbit burst 100kbit latency 5ms
+sudo ip netns exec r3 tc qdisc add dev r3b2 root tbf rate 100mbit burst 100kbit latency 5ms
+
+sudo ip netns exec b1 tc qdisc add dev b1b2 root tbf rate 10mbit burst 100kbit latency 40ms
+
+echo "\nfinal speed"
+sleep 5s
+
+sudo ip netns exec l1 iperf -c 10.0.4.1  -i 1 -P 5
+
+
+
+# Try ping now,
+sudo ip netns exec l1 ping 10.0.4.1 -c 2
+sudo ip netns exec l1 ping 10.0.5.1 -c 2
+sudo ip netns exec r1 ping 10.0.3.1 -c 2
+
+
 
